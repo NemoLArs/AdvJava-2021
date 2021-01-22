@@ -3,17 +3,17 @@ package arrayer.code;
 
 import arrayer.ui.UIFrame;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ArrayCollector {
 
+    String arrayFilePath = "AntonLUppgift1/src/resources/arrayOne.txt";
 
         public void ReadArrayFile(UIFrame uiFrame){
         try {
-            File arrayFile = new File("C:\\Users\\anton\\Desktop\\InUppEttUI\\Java\\InUppEttUI\\src\\resources\\arrayOne.txt");
+            File arrayFile = new File(arrayFilePath);
             Scanner myReader = new Scanner(arrayFile);
             while (myReader.hasNextLine()) {
                String data = myReader.nextLine();
@@ -28,7 +28,7 @@ public class ArrayCollector {
     }
 
     public void MakeStringArray(String data, UIFrame uiFrame) {
-        String[] array = null;
+        String[] array;
         array = data.split(",");
 
         SendToResolver(array, uiFrame);

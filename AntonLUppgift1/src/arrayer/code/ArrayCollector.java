@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class ArrayCollector {
 
-    String arrayFilePath = "AntonLUppgift1/src/resources/arrayOne.txt";
+    private static String arrayFilePath =  "AntonLUppgift1/src/resources/arrayOne.txt";
 
-        public void readArrayFile(UIFrame uiFrame){
+        public static void readArrayFile(UIFrame uiFrame){
         try {
             File arrayFile = new File(arrayFilePath);
             Scanner myReader = new Scanner(arrayFile);
@@ -27,16 +27,16 @@ public class ArrayCollector {
 
     }
 
-    public void makeStringArray(String data, UIFrame uiFrame) {
+    public static void makeStringArray(String data, UIFrame uiFrame) {
         String[] array;
         array = data.split(",");
 
         sendToResolver(array, uiFrame);
     }
 
-    public void sendToResolver(String[] array, UIFrame uiFrame){
+    public static void sendToResolver(String[] array, UIFrame uiFrame){
 
-        StreamPartOne.ArrayPartOne(array, uiFrame);
+        StreamPartOne.arrayPartOne(array, uiFrame);
 
     }
 }

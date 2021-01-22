@@ -11,7 +11,7 @@ public class StreamPartOne {
 
 
 
-    public static void ArrayPartOne(String[] partOneArray, UIFrame uiFrame){
+    public static void arrayPartOne(String[] partOneArray, UIFrame uiFrame){
 
         long longWordCount = Arrays.stream(partOneArray)
                 .filter(word -> word.length() > 8).count();

@@ -44,7 +44,7 @@ public class UIFrame extends JFrame implements ActionListener {
         }
         if (partOneButton.equals(action.getSource())){
             ArrayCollector arrayCollector = new ArrayCollector();
-            arrayCollector.ReadArrayFile(this);
+            arrayCollector.readArrayFile(this);
         }
     }
 

@@ -11,13 +11,13 @@ public class ArrayCollector {
 
     String arrayFilePath = "AntonLUppgift1/src/resources/arrayOne.txt";
 
-        public void ReadArrayFile(UIFrame uiFrame){
+        public void readArrayFile(UIFrame uiFrame){
         try {
             File arrayFile = new File(arrayFilePath);
             Scanner myReader = new Scanner(arrayFile);
             while (myReader.hasNextLine()) {
                String data = myReader.nextLine();
-                MakeStringArray(data, uiFrame);
+                makeStringArray(data, uiFrame);
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -27,18 +27,16 @@ public class ArrayCollector {
 
     }
 
-    public void MakeStringArray(String data, UIFrame uiFrame) {
+    public void makeStringArray(String data, UIFrame uiFrame) {
         String[] array;
         array = data.split(",");
 
-        SendToResolver(array, uiFrame);
+        sendToResolver(array, uiFrame);
     }
 
-    public void SendToResolver(String[] array, UIFrame uiFrame){
+    public void sendToResolver(String[] array, UIFrame uiFrame){
 
-            StreamPartOne streamPartOne = new StreamPartOne();
-        streamPartOne.ArrayPartOne(array, uiFrame);
-
+        StreamPartOne.ArrayPartOne(array, uiFrame);
 
     }
 }

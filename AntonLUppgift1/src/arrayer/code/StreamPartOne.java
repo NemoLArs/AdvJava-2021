@@ -7,11 +7,11 @@ import java.util.Arrays;
 import java.util.function.Predicate;
 
 
-public class StreamPartOne extends JList {
+public class StreamPartOne {
 
 
 
-    public void ArrayPartOne(String[] partOneArray, UIFrame uiFrame){
+    public static void ArrayPartOne(String[] partOneArray, UIFrame uiFrame){
 
         long longWordCount = Arrays.stream(partOneArray)
                 .filter(word -> word.length() > 8).count();
